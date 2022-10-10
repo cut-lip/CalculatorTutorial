@@ -1,18 +1,15 @@
 #include "Calculator.h"
+#include <string>
 
-double Calculator::Calculate(double x, char oper, double y)
+// Evaluate expression entered into Calculator
+double Calculator::Calculate(std::string s)
 {
-	switch (oper)
-	{
-		case '+':
-			return x + y;
-		case '-':
-			return x - y;
-		case '*':
-			return x * y;
-		case '/':
-			return x / y;
-		default:
-			return 0.0;
-	}
+	// Evaluate expression by converting to postfix with Shunting Yard algorithm
+
+}
+
+// Check if given string is valid input for a Calculator
+bool IsValid(std::string s)
+{
+	return false;
 }

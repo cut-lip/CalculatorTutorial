@@ -8,26 +8,22 @@ using namespace std;
 
 int main()
 {
-
-    double x = 0.0;
-    double y = 0.0;
-    double result = 0.0;
-    char oper = '+';
-
-
     cout << "Console Calender Application" << endl << endl;
-    cout << "Please enter the operation to perform. Format: a+b | a-b | a*b | a/b" << endl;
+    cout << "Please enter a correctly formatted expression." << endl;
+    cout << "Permitted operations are +, -, *, /, ^, sin, cos, tan, cot, ln, log10:\n" << endl;
 
     Calculator c;
+    string result;
     while (true)
     {
-        cin >> x >> oper >> y;
-        if (y == 0 && oper == '/') {
+        string input;
+        cin >> input;
+        if (IsValid(s)) {
             cout << "Expection - Division by 0" << endl;
             continue;
         }
         else {
-            result = c.Calculate(x, oper, y);
+            result = c.Calculate(input);
         }
         cout << "Result is: " << result << endl;
     }
